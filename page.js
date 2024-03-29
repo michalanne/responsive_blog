@@ -6,6 +6,7 @@ createApp({
       posts: [
         {
           title: "About Functional Programming",
+          bannerImage: "imgs/dogs_running.jpeg",
           author: "Ethyl Gibson",
           published: "2024-03-14",
           readingTime: "5 min",
@@ -15,6 +16,7 @@ createApp({
         },
         {
           title: "Intro to Vue",
+          bannerImage: "imgs/dogs_running.jpeg",
           author: "Ethyl Gibson",
           published: "2024-03-14",
           readingTime: "5 min",
@@ -30,7 +32,8 @@ If you're new to Vue, this post will serve as a gentle introduction to the frame
         },
         {
           title: "The Basics of JavaScript",
-          author: "Ethyl Gibson", 
+          bannerImage: "imgs/dogs_running.jpeg",
+          author: "Ethyl Gibson",
           published: "2024-03-14",
           readingTime: "5 min",
           tags: ["JavaScript", "Coding"],

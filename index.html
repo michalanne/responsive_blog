@@ -22,13 +22,13 @@
             </div>
             <div class="topnav-right">
                 <div class="topnav-right-buttons">
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Top Posts</a>
+                    <a href="https://optical.toys/">Top Posts</a>
                 </div>
                 <div class="topnav-right-buttons">
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Archive</a>
+                    <a href="https://paint.toys/">Archive</a>
                 </div>
                 <div class="topnav-right-buttons">
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">About Me</a>
+                    <a href="https://sliding.toys/mystic-square/8-puzzle/daily/">About Me</a>
                 </div>
             </div>
         </div>
@@ -36,6 +36,7 @@
     <main>
         <div class="content">
             <section v-for="post in posts">
+                <img src="imgs/dogs_running.jpeg">
                 <div class="box-info">
                     <h1>{{ post.title }}</h1>
                     <h2>{{ post.published }}</h2>
@@ -51,13 +52,15 @@
                 <div>
                     <p v-for='line in post.body.split("\n")'>{{ line }}</p>
                 </div>
+
             </section>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            Copyright &copy; {{ new Date().getFullYear() }} Ethyl Gibson. All Rights Reserved.
+            Copyright &copy; {{ new Date().getFullYear() }}
+            <a href="https://puginarug.com/">Ethyl Gibson</a>. All Rights Reserved.
         </div>
     </footer>
 </body>
