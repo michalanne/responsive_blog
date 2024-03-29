@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethyl's Blog Site</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="page.js" type="module"></script>
+    <script src="__lightserver__/reload-client.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body id="app">
+    <header>
+        <div class="topnav">
+            <div class="topnav-left">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <h1>My Blog Site</h1>
+                </a>
+            </div>
+            <div class="topnav-right">
+                <div class="topnav-right-buttons">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Top Posts</a>
+                </div>
+                <div class="topnav-right-buttons">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Archive</a>
+                </div>
+                <div class="topnav-right-buttons">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">About Me</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <section v-for="post in posts">
+                <div class="box-info">
+                    <h1>{{ post.title }}</h1>
+                    <h2>{{ post.published }}</h2>
+                </div>
+                <div class="box-info">
+                    <h2>Author: {{ post.author }}</h2>
+                    <h2>Reading time: {{ post.readingTime }}</h2>
+                </div>
+                <div class="box-info">
+                    <h2>Likes: {{ post.likes }}</h2>
+                    <h2>Preview/Tags: {{ post.tags[0] }}, {{ post.tags[1] }}</h2>
+                </div>
+                <div>
+                    <p v-for='line in post.body.split("\n")'>{{ line }}</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            Copyright &copy; {{ new Date().getFullYear() }} Ethyl Gibson. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+/* Styles for light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+/* Styles for dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    background-color: light-dark(#42C0FF, #223a2c);
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: medium;
+}
+
+.topnav {
+    background-color: green;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    z-index: 1000;
+    height: 8%;
+}
+
+.topnav-left {
+    position: absolute;
+    left: 3%;
+    color: orange;
+    text-decoration: none;
+
+}
+
+.topnav-right {
+    display: flex;
+    position: absolute;
+    right: 5%;
+}
+
+.topnav-right-buttons {
+    padding: 10px;
+}
+
+.content {
+    padding-top: 8%;
+    padding: 10%;
+}
+
+.content section {
+    border: 10px solid yellow;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', monospace;
+    padding: 10%;
+    background-color: white;
+    box-shadow: 10px 10px 5px lightblue;
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+}
+
+.box-info {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer {
+    background-color: purple;
+    color: white;
+    padding: 20px 0;
+    bottom: 0;
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container p {
+    margin: 5px 0;
+}
